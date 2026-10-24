@@ -1,0 +1,407 @@
+
+/* =================================
+   ELECTRIC SERVICE CENTER WEBSITE
+   Complete Responsive CSS
+================================= */
+
+/* 1. Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f7fc;
+  color: #263244;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* 2. Header */
+header {
+  width: 100%;
+  background: #082b55;
+  color: #ffffff;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+/* 3. Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #082b55;
+  background: #ffc107;
+}
+
+/* 4. Home Hero Section */
+.hero {
+  width: 100%;
+  min-height: 360px;
+  background: linear-gradient(135deg, #073b78, #1686d9);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 18px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 700px;
+  margin-bottom: 28px;
+  color: #edf6ff;
+}
+
+/* 5. Buttons */
+.btn {
+  display: inline-block;
+  background: #ffc107;
+  color: #172033;
+  border: 2px solid #ffc107;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: #082b55;
+  transform: translateY(-2px);
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+/* 6. General Containers */
+.container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 50px 22px;
+}
+
+.section-title {
+  color: #082b55;
+  font-size: clamp(25px, 4vw, 34px);
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+/* 7. Service Cards Grid */
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+/* 8. Individual Cards */
+.card {
+  background: #ffffff;
+  padding: 28px 22px;
+  border: 1px solid #e5eaf2;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(8, 43, 85, 0.07);
+  text-align: center;
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(8, 43, 85, 0.13);
+}
+
+.card h2,
+.card h3 {
+  color: #0755a0;
+  margin: 10px 0 12px;
+  line-height: 1.35;
+}
+
+.card h2 {
+  font-size: 25px;
+}
+
+.card h3 {
+  font-size: 21px;
+}
+
+.card p {
+  color: #5c6675;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.service-icon {
+  font-size: 52px;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+
+/* 9. Individual Service Page Banner */
+.page-banner {
+  background: linear-gradient(135deg, #e4efff, #f4f8ff);
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 1px solid #d8e5f6;
+}
+
+.page-banner h1 {
+  color: #082b55;
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+
+.page-banner p {
+  color: #43546b;
+  font-size: 17px;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* 10. Booking Form */
+#booking {
+  scroll-margin-top: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #e3e9f2;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(8, 43, 85, 0.08);
+}
+
+form label {
+  display: block;
+  color: #263244;
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 12px;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 13px 14px;
+  margin: 0 0 12px;
+  background: #ffffff;
+  color: #263244;
+  border: 1px solid #ccd5e1;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+  transition: border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #1686d9;
+  box-shadow: 0 0 0 3px rgba(22, 134, 217, 0.12);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #929baa;
+}
+
+textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+form .btn {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.notice {
+  text-align: center;
+  color: #08753b;
+  font-weight: 600;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* 11. Footer */
+footer {
+  width: 100%;
+  background: #082b55;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 18px;
+  margin-top: 25px;
+}
+
+footer p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #e4efff;
+}
+
+/* 12. Tablet Responsive Design */
+@media (max-width: 900px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .services {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hero {
+    min-height: 320px;
+  }
+}
+
+/* 13. Mobile Responsive Design */
+@media (max-width: 600px) {
+  header {
+    padding: 18px 12px;
+    gap: 12px;
+  }
+
+  header h2 {
+    font-size: 21px;
+  }
+
+  nav {
+    gap: 6px;
+  }
+
+  nav a {
+    font-size: 13px;
+    padding: 7px 9px;
+  }
+
+  .hero {
+    min-height: 300px;
+    padding: 55px 18px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 35px 16px;
+  }
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .card {
+    padding: 24px 18px;
+  }
+
+  .page-banner {
+    padding: 45px 16px;
+  }
+
+  .page-banner p {
+    font-size: 15px;
+  }
+
+  form {
+    padding: 22px 17px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+  }
+}
+
+/* 14. Accessibility */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #1686d9;
+  outline-offset: 3px;
+}
