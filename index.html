@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electric Service Center | Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h2>⚡ Electric Service Center</h2>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="ac.html">AC</a>
+    <a href="refrigerator.html">Fridge</a>
+    <a href="cooler.html">Cooler</a>
+    <a href="oven.html">Oven</a>
+    <a href="tv.html">TV</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Reliable Home Appliance Repair</h1>
+  <p>AC, Refrigerator, Cooler, Oven and TV Repair Services</p>
+  <a class="btn" href="#booking">Book a Service</a>
+</section>
+
+<section class="container">
+  <h2 class="section-title">Our Repair Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <div class="service-icon">❄️</div>
+      <h3>AC Repair</h3>
+      <p>AC servicing, cooling problems and installation.</p>
+      <a class="btn" href="ac.html">View Service</a>
+    </div>
+
+    <div class="card">
+      <div class="service-icon">🧊</div>
+      <h3>Refrigerator Repair</h3>
+      <p>Fridge cooling, leakage and other repairs.</p>
+      <a class="btn" href="refrigerator.html">View Service</a>
+    </div>
+
+    <div class="card">
+      <div class="service-icon">🌬️</div>
+      <h3>Cooler Repair</h3>
+      <p>Cooler motor, pump and water problems.</p>
+      <a class="btn" href="cooler.html">View Service</a>
+    </div>
+
+    <div class="card">
+      <div class="service-icon">♨️</div>
+      <h3>Oven Repair</h3>
+      <p>Microwave heating and electrical repairs.</p>
+      <a class="btn" href="oven.html">View Service</a>
+    </div>
+
+    <div class="card">
+      <div class="service-icon">📺</div>
+      <h3>TV Repair</h3>
+      <p>LED, LCD and Smart TV repair services.</p>
+      <a class="btn" href="tv.html">View Service</a>
+    </div>
+  </div>
+</section>
+
+<section class="container" id="booking">
+  <h2 class="section-title">Book a Repair Service</h2>
+
+  <form id="bookingForm">
+    <label for="customerName">Your Name</label>
+    <input id="customerName" type="text"
+      placeholder="Enter your name" required>
+
+    <label for="customerPhone">Phone Number</label>
+    <input id="customerPhone" type="tel"
+      placeholder="Enter your phone number"
+      pattern="[0-9]{10}" maxlength="10" required>
+
+    <label for="service">Select Service</label>
+    <select id="service" required>
+      <option value="">Choose a service</option>
+      <option>AC Repair</option>
+      <option>Refrigerator Repair</option>
+      <option>Cooler Repair</option>
+      <option>Oven Repair</option>
+      <option>TV Repair</option>
+    </select>
+
+    <label for="details">Problem Details</label>
+    <textarea id="details"
+      placeholder="Describe your appliance problem"></textarea>
+
+    <button class="btn" type="submit">Submit Booking</button>
+    <p id="formMessage" class="notice" aria-live="polite"></p>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Electric Service Center. All rights reserved.</p>
+  <p>Quality Repairs | Reliable Service</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
